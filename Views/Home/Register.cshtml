@@ -1,0 +1,56 @@
+﻿@model User
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container" style="width: 80%">
+    <div class="row justify-content-between">
+        <div class="col-9">
+    <h1 class="display-4 m-3">Register to this Cool Site!</h1>
+    </div>
+    <div class="col-1 mt-5">
+        <a href="/login">Login</a>
+    </div>
+    </div>
+    <form asp-action="Registering" asp-controller="Home" method="post">
+                    <div class="row">
+                        <div class='col-md-6'>
+                            <label asp-for='FirstName'>First Name</label>
+                            <input type="text" asp-for="FirstName" id='FirstName' class='form-control'>
+                            <span asp-validation-for="FirstName" style="color: red;"></span><br>
+                        </div>
+                        <div class='col-md-6'>
+                            <label asp-for="LastName">Last Name</label>
+                            <input asp-for="LastName"  class='form-control'>
+                            <span asp-validation-for="LastName" style="color: red;"></span><br>
+                        </div>
+                    </div>
+                    <label asp-for="Email">Email</label>
+                    <input asp-for="Email" id='email' class='form-control'>
+                    <span asp-validation-for="Email" style="color: red;"></span><br>
+                    <div class="row">
+                        <div class='col-md-6'>
+                            <label asp-for="Password">Password</label>
+                            <input asp-for="Password" class='form-control'>
+                            <span asp-validation-for="Password" style="color: red;"></span><br>
+                        </div>
+                        <div class='col-md-6'>
+                            <label asp-for="Confirm">Confirm Password</label>
+                            <input asp-for="Confirm" class='form-control'>
+                            <span asp-validation-for="Confirm" style="color: red;"></span><br>
+                        </div>
+                    </div>
+                    <br>
+                    <input type="submit" value="Register" class="button btn btn-primary">
+
+                </form>
+                </div>
+</body>
+</html>
+
+

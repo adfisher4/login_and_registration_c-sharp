@@ -1,0 +1,37 @@
+@model LoginUser
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container" style="width: 80%">
+    <div class="row justify-content-between">
+        <div class="col-9">
+    <h1 class="display-4 m-3">Login to this Cool Site!</h1>
+    </div>
+    <div class="col-1 mt-5">
+        <a href="/">Register</a>
+    </div>
+    </div>
+    <form action="attempt" method="post" class="login rounded border border-success p-4">
+                    <h2>Login</h2>
+                    
+                    <label asp-for="Email">Email</label>
+                    <input asp-for="Email" class='form-control'>
+                    
+                    <label asp-for="Password">Password</label>
+                    <input asp-for="Password" class='form-control'>
+                    <span asp-validation-for="Email" style="color: red;"></span><br>
+                    <span asp-validation-for="Password" style="color: red;"></span><br>
+                    <input type="submit" value="Login" class="button btn btn-primary">  
+                   
+                </form>
+    
+</body>
+</html>
